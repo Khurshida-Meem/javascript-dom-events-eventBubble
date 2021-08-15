@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section id="blogs">
+            <header>
+                <h2>Blogs list</h2>
+                <ul id="blog-list">
+                    <li>Blog-1</li>
+                    <li>Blog-2</li>
+                    <li>Blog-3</li>
+                    <li>Blog-4</li>
+                </ul>
+            </header>
+            <article class="blog">
+                <h3 id="first-header">My Travel Blog- 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa commodi modi totam fuga ipsum
+                    obcaecati, nemo placeat provident quibusdam quae, est necessitatibus quis tempora inventore iure
+                    illo numquam, ducimus maiores.</p>
+            </article>
+            <article class="blog">
+                <h3 id="second-title">My Travel Blog- 2</h3>
+                <p>Molestias est aspernatur, rerum ex impedit blanditiis sed autem perferendis facilis facere cupiditate
+                    obcaecati sunt quos quis neque quia ullam beatae explicabo sequi? Nostrum, consectetur ipsum? Iure a
+                    laborum facilis.</p>
+            </article>
+            <article class="blog">
+                <h3 id="third-title">My Travel Blog- 3</h3>
+                <p>Impedit est alias eveniet odio beatae quas ut officiis rem ullam, itaque quasi. Natus deserunt, ad
+                    quae quia vitae, nihil tempore fugit, voluptatibus commodi qui aut sequi laboriosam nesciunt
+                    quaerat!</p>
+            </article>
+            <article class="blog">
+                <h3>My Travel Blog- 4</h3>
+                <p>Deleniti molestiae ab repellendus dolor quia accusantium veritatis debitis vitae perspiciatis quis
+                    nulla deserunt pariatur, fugiat ipsum nihil labore id. Ut placeat facilis obcaecati cupiditate omnis
+                    dolorum possimus neque corrupti!</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+
+        // explore getElementsByTagName Javascript
+        const blogTitles = document.getElementsByTagName('h3');
+        for (const h3 of blogTitles) {
+            //console.log(h3.innerText);
+        }
+
+        // explore getElementById
+        const secondTitle = document.getElementById('second-title');
+        secondTitle.style.textAlign = 'center';
+        const third = document.getElementById('third-title');
+        third.innerText = 'Title updated by JS';
+        third.style.backgroundColor = 'salmon';
+        third.style.padding = '10px';
+        third.style.marginLeft = '20px';
+
+
+        // creat and add element by list item 
+        const li = document.createElement('li'); //create element
+        li.innerText = 'Blog-5'; //add desired text to element
+        const ul = document.getElementById('blog-list'); //catch parent node to add the element
+        ul.appendChild(li); //append the element
+
+        // add article
+        const article = document.createElement('article');
+        article.classList.add('blog')
+        const h3 = document.createElement('h3');
+        h3.innerText = 'My Travel blog 5';
+        const p = document.createElement('p');
+        p.innerText = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa commodi modi totam fuga ipsum obcaecati, nemo placeat provident quibusdam quae, est necessitatibus quis tempora inventore iure illo numquam, ducimus maiores.';
+        article.appendChild(h3);
+        article.appendChild(p);
+
+        const blogSection = document.getElementById('blogs');
+        blogSection.appendChild(article);
+
+        // add article using inner HTML 
+        article.innerHTML = `
+            <h3>My Travel Blog- 6</h3>
+                <p>Deleniti molestiae ab repellendus dolor quia accusantium veritatis debitis vitae perspiciatis quis
+                    nulla deserunt pariatur, fugiat ipsum nihil labore id. Ut placeat facilis obcaecati cupiditate omnis
+                    dolorum possimus neque corrupti!</p>
+        `
+
+        // explore getElementsByClassName
+        const blogs = document.getElementsByClassName('blog');
+        for (const blog of blogs) {
+            blog.style.border = '2px solid orange';
+            blog.style.borderRadius = '10px';
+            blog.style.margin = '5px';
+            blog.style.padding = '5px';
+        }
+    </script>
+</body>
+
+</html>

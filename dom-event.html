@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: limegreen;">
+    <main>
+        <!-- clicking events -->
+        <h1 onclick="alert('Valo hoye jao javascript')">Explore Events</h1>
+        <!-- change bg color -->
+        <section>
+            <!-- eta kora uchit na  -->
+            <button onclick="document.body.style.backgroundColor = 'yellow'">Click Me: yellow</button>
+            <!-- using function  -->
+            <button onclick="makeBlue()">Click Me: blue</button>
+            
+            <!-- using getElement -->
+            <button id="make-red-button">click me: red</button>
+            <button id="make-green-button">click me: green</button>
+            <button id="make-golden-button">click me: golden</button>
+            <button id="make-pink-button">click me: pink</button>
+            <button id="make-salmon-button">click me: salmon</button>
+        </section>
+        <!-- event common style and update things-->
+        <section>
+            <br><br>
+            <!-- update the value of only function paragraph -->
+            <input type="text" id="text-field">
+            <button id="update-name">Update</button>
+            <br> <br>
+            <p id="clicking-method"></p>
+            <button onclick="handleOnlyFunctionClick()">only function</button>
+            <button id="direct-event-handle">direct addeventlistener</button>
+        </section>
+        <!-- create or make comment -->
+        <section>
+            <h1>Our comments</h1>
+            <div id="comment-container">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt esse itaque iste, quos quo deleniti doloribus labore odio repellendus nostrum laborum libero, ad, error aspernatur consequuntur reiciendis minus tenetur quibusdam?</p>
+                <p>Est eos esse accusantium, consequuntur assumenda, veniam inventore accusamus quisquam sequi non omnis voluptate voluptates magnam corrupti quidem velit officiis totam architecto fugit veritatis quis a! Vero consequuntur sint quas?</p>
+            </div>
+            <div>
+                <textarea name="" id="new-comment" cols="60" rows="4"></textarea>
+                <br>
+                <button id="submit-comment">Post</button>
+            </div>
+        </section>
+
+        <!-- more events -->
+        <section>
+            <h1>More events</h1>
+            <div>
+                <h3 id="secret-info">secret information</h3>
+                <input type="text" placeholder="please type delete" id="delete-confirm">
+                <button id="delete-button" disabled>Delete</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/dom-event.js"></script>
+</body>
+</html>
